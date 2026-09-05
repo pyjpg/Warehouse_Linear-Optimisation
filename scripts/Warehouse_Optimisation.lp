@@ -1,0 +1,141 @@
+\* Warehouse_Transportation *\
+Minimize
+Total_Upper_Cost: 103.93837721 ship_Basildon_Distribution_Centre_Birmingham
+ + 52.6995462065 ship_Basildon_Distribution_Centre_Brighton
+ + 117.078548929 ship_Basildon_Distribution_Centre_Bristol
+ + 139.568293481 ship_Basildon_Distribution_Centre_Cardiff
+ + 8.9297293799 ship_Basildon_Distribution_Centre_Chelmsford
+ + 298.04003766 ship_Basildon_Distribution_Centre_Edinburgh
+ + 312.31507167 ship_Basildon_Distribution_Centre_Glasgow
+ + 154.600833683 ship_Basildon_Distribution_Centre_Leeds
+ + 88.3228019889 ship_Basildon_Distribution_Centre_Leicester
+ + 167.998295072 ship_Basildon_Distribution_Centre_Liverpool
+ + 23.8642253372 ship_Basildon_Distribution_Centre_London
+ + 220.76840321 ship_Basildon_Distribution_Centre_Newcastle
+ + 70.4366864875 ship_Basildon_Distribution_Centre_Norwich
+ + 103.494269902 ship_Basildon_Distribution_Centre_Nottingham
+ + 131.584844515 ship_Basildon_Distribution_Centre_Sheffield
+ + 1.60356565187 ship_Birmingham_Distribution_Centre_Birmingham
+ + 122.784286567 ship_Birmingham_Distribution_Centre_Brighton
+ + 70.6338973251 ship_Birmingham_Distribution_Centre_Bristol
+ + 79.8612619791 ship_Birmingham_Distribution_Centre_Cardiff
+ + 100.420272826 ship_Birmingham_Distribution_Centre_Chelmsford
+ + 215.443333649 ship_Birmingham_Distribution_Centre_Edinburgh
+ + 221.518060331 ship_Birmingham_Distribution_Centre_Glasgow
+ + 79.4401936186 ship_Birmingham_Distribution_Centre_Leeds
+ + 28.7703496401 ship_Birmingham_Distribution_Centre_Leicester
+ + 65.9275763349 ship_Birmingham_Distribution_Centre_Liverpool
+ + 90.2525300701 ship_Birmingham_Distribution_Centre_London
+ + 150.73098948 ship_Birmingham_Distribution_Centre_Newcastle
+ + 118.14563167 ship_Birmingham_Distribution_Centre_Norwich
+ + 38.1370986632 ship_Birmingham_Distribution_Centre_Nottingham
+ + 55.1033124498 ship_Birmingham_Distribution_Centre_Sheffield
+ + 79.0851541758 ship_Leeds_Distribution_Centre_Birmingham
+ + 187.617200528 ship_Leeds_Distribution_Centre_Brighton
+ + 147.849344445 ship_Leeds_Distribution_Centre_Bristol
+ + 153.096941813 ship_Leeds_Distribution_Centre_Cardiff
+ + 144.686787426 ship_Leeds_Distribution_Centre_Chelmsford
+ + 145.82675348 ship_Leeds_Distribution_Centre_Edinburgh
+ + 160.033002682 ship_Leeds_Distribution_Centre_Glasgow
+ + 1.88488684363 ship_Leeds_Distribution_Centre_Leeds
+ + 70.8541299595 ship_Leeds_Distribution_Centre_Leicester
+ + 55.9403145607 ship_Leeds_Distribution_Centre_Liverpool
+ + 147.738510553 ship_Leeds_Distribution_Centre_London
+ + 73.5816779912 ship_Leeds_Distribution_Centre_Newcastle
+ + 124.330312623 ship_Leeds_Distribution_Centre_Norwich
+ + 51.8032671513 ship_Leeds_Distribution_Centre_Nottingham
+ + 23.9906635319 ship_Leeds_Distribution_Centre_Sheffield
+Subject To
+Capacity_Basildon_Distribution_Centre:
+ ship_Basildon_Distribution_Centre_Birmingham
+ + ship_Basildon_Distribution_Centre_Brighton
+ + ship_Basildon_Distribution_Centre_Bristol
+ + ship_Basildon_Distribution_Centre_Cardiff
+ + ship_Basildon_Distribution_Centre_Chelmsford
+ + ship_Basildon_Distribution_Centre_Edinburgh
+ + ship_Basildon_Distribution_Centre_Glasgow
+ + ship_Basildon_Distribution_Centre_Leeds
+ + ship_Basildon_Distribution_Centre_Leicester
+ + ship_Basildon_Distribution_Centre_Liverpool
+ + ship_Basildon_Distribution_Centre_London
+ + ship_Basildon_Distribution_Centre_Newcastle
+ + ship_Basildon_Distribution_Centre_Norwich
+ + ship_Basildon_Distribution_Centre_Nottingham
+ + ship_Basildon_Distribution_Centre_Sheffield <= 5000
+Capacity_Birmingham_Distribution_Centre:
+ ship_Birmingham_Distribution_Centre_Birmingham
+ + ship_Birmingham_Distribution_Centre_Brighton
+ + ship_Birmingham_Distribution_Centre_Bristol
+ + ship_Birmingham_Distribution_Centre_Cardiff
+ + ship_Birmingham_Distribution_Centre_Chelmsford
+ + ship_Birmingham_Distribution_Centre_Edinburgh
+ + ship_Birmingham_Distribution_Centre_Glasgow
+ + ship_Birmingham_Distribution_Centre_Leeds
+ + ship_Birmingham_Distribution_Centre_Leicester
+ + ship_Birmingham_Distribution_Centre_Liverpool
+ + ship_Birmingham_Distribution_Centre_London
+ + ship_Birmingham_Distribution_Centre_Newcastle
+ + ship_Birmingham_Distribution_Centre_Norwich
+ + ship_Birmingham_Distribution_Centre_Nottingham
+ + ship_Birmingham_Distribution_Centre_Sheffield <= 6000
+Capacity_Leeds_Distribution_Centre: ship_Leeds_Distribution_Centre_Birmingham
+ + ship_Leeds_Distribution_Centre_Brighton
+ + ship_Leeds_Distribution_Centre_Bristol
+ + ship_Leeds_Distribution_Centre_Cardiff
+ + ship_Leeds_Distribution_Centre_Chelmsford
+ + ship_Leeds_Distribution_Centre_Edinburgh
+ + ship_Leeds_Distribution_Centre_Glasgow
+ + ship_Leeds_Distribution_Centre_Leeds
+ + ship_Leeds_Distribution_Centre_Leicester
+ + ship_Leeds_Distribution_Centre_Liverpool
+ + ship_Leeds_Distribution_Centre_London
+ + ship_Leeds_Distribution_Centre_Newcastle
+ + ship_Leeds_Distribution_Centre_Norwich
+ + ship_Leeds_Distribution_Centre_Nottingham
+ + ship_Leeds_Distribution_Centre_Sheffield <= 4000
+Demand_Birmingham: ship_Basildon_Distribution_Centre_Birmingham
+ + ship_Birmingham_Distribution_Centre_Birmingham
+ + ship_Leeds_Distribution_Centre_Birmingham >= 1300
+Demand_Brighton: ship_Basildon_Distribution_Centre_Brighton
+ + ship_Birmingham_Distribution_Centre_Brighton
+ + ship_Leeds_Distribution_Centre_Brighton >= 500
+Demand_Bristol: ship_Basildon_Distribution_Centre_Bristol
+ + ship_Birmingham_Distribution_Centre_Bristol
+ + ship_Leeds_Distribution_Centre_Bristol >= 800
+Demand_Cardiff: ship_Basildon_Distribution_Centre_Cardiff
+ + ship_Birmingham_Distribution_Centre_Cardiff
+ + ship_Leeds_Distribution_Centre_Cardiff >= 550
+Demand_Chelmsford: ship_Basildon_Distribution_Centre_Chelmsford
+ + ship_Birmingham_Distribution_Centre_Chelmsford
+ + ship_Leeds_Distribution_Centre_Chelmsford >= 400
+Demand_Edinburgh: ship_Basildon_Distribution_Centre_Edinburgh
+ + ship_Birmingham_Distribution_Centre_Edinburgh
+ + ship_Leeds_Distribution_Centre_Edinburgh >= 600
+Demand_Glasgow: ship_Basildon_Distribution_Centre_Glasgow
+ + ship_Birmingham_Distribution_Centre_Glasgow
+ + ship_Leeds_Distribution_Centre_Glasgow >= 800
+Demand_Leeds: ship_Basildon_Distribution_Centre_Leeds
+ + ship_Birmingham_Distribution_Centre_Leeds
+ + ship_Leeds_Distribution_Centre_Leeds >= 1100
+Demand_Leicester: ship_Basildon_Distribution_Centre_Leicester
+ + ship_Birmingham_Distribution_Centre_Leicester
+ + ship_Leeds_Distribution_Centre_Leicester >= 600
+Demand_Liverpool: ship_Basildon_Distribution_Centre_Liverpool
+ + ship_Birmingham_Distribution_Centre_Liverpool
+ + ship_Leeds_Distribution_Centre_Liverpool >= 900
+Demand_London: ship_Basildon_Distribution_Centre_London
+ + ship_Birmingham_Distribution_Centre_London
+ + ship_Leeds_Distribution_Centre_London >= 1800
+Demand_Newcastle: ship_Basildon_Distribution_Centre_Newcastle
+ + ship_Birmingham_Distribution_Centre_Newcastle
+ + ship_Leeds_Distribution_Centre_Newcastle >= 650
+Demand_Norwich: ship_Basildon_Distribution_Centre_Norwich
+ + ship_Birmingham_Distribution_Centre_Norwich
+ + ship_Leeds_Distribution_Centre_Norwich >= 450
+Demand_Nottingham: ship_Basildon_Distribution_Centre_Nottingham
+ + ship_Birmingham_Distribution_Centre_Nottingham
+ + ship_Leeds_Distribution_Centre_Nottingham >= 700
+Demand_Sheffield: ship_Basildon_Distribution_Centre_Sheffield
+ + ship_Birmingham_Distribution_Centre_Sheffield
+ + ship_Leeds_Distribution_Centre_Sheffield >= 850
+End
