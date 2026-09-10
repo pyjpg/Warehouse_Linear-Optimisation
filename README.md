@@ -43,7 +43,7 @@ $$x_{ij},\ s_i,\ e_j \geq 0$$
 
 **Maximise:**
 
-$$\sum_{i=1}^{3} \text{capacity}_i\, u_i + \sum_{j=1}^{15}\text{demand}_j\, v_j$$
+$$\sum_{i=1}^{3} \text{capacity}_i \cdot u_i + \sum_{j=1}^{15} \text{demand}_j \cdot v_j$$
 
 **Subject to:**
 
@@ -63,8 +63,8 @@ $x_{ij}$ = units shipped warehouse $i$ → store $j$. $u_i, v_j$ = shadow prices
 
 | Scenario | Naive (nearest-only) | LP-Optimised |
 |---|---|---|
-| Lower bound | £360,363 ⚠️ infeasible | £360,689 |
-| Upper bound | £587,210 ⚠️ infeasible | £596,198 |
+| Lower bound | £360,363 infeasible | £360,689 |
+| Upper bound | £587,210 infeasible | £596,198 |
 
 Naive assigns 4,900 units to Leeds DC (capacity: 4,000) — impossible. The LP is the cheapest **achievable** plan, costing only £326–£8,988 more than the invalid naive estimate. Leeds DC runs at 100% capacity (the network bottleneck); Basildon and Birmingham DC have slack. The optimal allocation is identical across both cost scenarios.
 
