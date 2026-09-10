@@ -4,7 +4,7 @@
 
 ## The Problem
 
-3 UK distribution centres ship to 15 stores. Each warehouse has a fixed **capacity**, each store has a fixed **demand**, and every route has a **cost** (haversine distance × £0.45/km). The goal: find the shipment plan that minimises total cost while respecting every capacity and demand constraint.
+3 UK distribution centres ship to 15 stores. Each warehouse has a fixed **capacity**, each store has a fixed **demand**, and every route has a **cost** (haversine distance × £0.45/km). The goal is to find the shipment plan that minimises total cost while respecting every capacity and demand constraint.
 
 | Warehouse | Capacity |
 |---|---|
@@ -14,7 +14,7 @@
 
 Total capacity (15,000) exceeds total demand (12,000) — the problem is feasible before solving.
 
-Since haversine gives straight-line distance, not real road distance, cost is bounded two ways: a **lower bound** (raw haversine) and an **upper bound** (inflated for road circuity).
+Since haversine gives straight-line distance, not real road distance, cost is bounded in two ways: a **lower bound** (raw haversine) and an **upper bound** (inflated for road circuity).
 
 ## Linear Program
 
