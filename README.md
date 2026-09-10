@@ -18,13 +18,7 @@ Since haversine gives straight-line distance, not real road distance, cost is bo
 
 ## Linear Program
 
-<table>
-<tr>
-<th width="50%">Standard Form (Primal)</th>
-<th width="50%">Dual Problem</th>
-</tr>
-<tr>
-<td>
+### Standard Form (Primal)
 
 **Minimise:**
 
@@ -38,12 +32,13 @@ $$\sum_{i=1}^{3} x_{ij} - e_j = \text{demand}_j \quad \forall j$$
 
 $$x_{ij},\ s_i,\ e_j \geq 0$$
 
-</td>
-<td>
+---
+
+### Dual Problem
 
 **Maximise:**
 
-$\sum_{i=1}^{3} \text{capacity}_i \cdot u_i + \sum_{j=1}^{15} \text{demand}_j \cdot v_j$
+$$\sum_{i=1}^{3} \text{capacity}_i \cdot u_i + \sum_{j=1}^{15} \text{demand}_j \cdot v_j$$
 
 **Subject to:**
 
@@ -53,11 +48,12 @@ $$u_i \leq 0 \quad \forall i$$
 
 $$v_j \geq 0 \quad \forall j$$
 
-</td>
-</tr>
-</table>
+---
 
-$x_{ij}$ = units shipped warehouse $i$ → store $j$. $u_i, v_j$ = shadow prices of capacity/demand. By complementary slackness, only **Leeds DC** has $u_i \neq 0$ — it's the only warehouse fully utilised at optimum.
+$x_{ij}$ = units shipped warehouse $i$ → store $j$.  
+$u_i, v_j$ = shadow prices of capacity/demand.  
+
+By complementary slackness, only **Leeds DC** has $u_i \neq 0$ — it's the only warehouse fully utilised at optimum.
 
 ## Results
 
@@ -70,16 +66,10 @@ Naive assigns 4,900 units to Leeds DC (capacity: 4,000) — impossible. The LP i
 
 ## Visualisations
 
-<table>
-<tr>
-<td width="50%"><img src="scripts/matplot.png"/></td>
-<td width="50%"><img src="data/sources_sinks_map.png"/></td>
-</tr>
-<tr>
-<td width="50%"><img src="scripts/naive_vs_optimised.png"/></td>
-<td width="50%"><img src="scripts/utilisation_comparison.png"/></td>
-</tr>
-</table>
+| Map & Network | Optimisation Metrics |
+|---|---|
+| ![Matplot Analysis](scripts/matplot.png) | ![Sources and Sinks Map](data/sources_sinks_map.png) |
+| ![Naive vs Optimised](scripts/naive_vs_optimised.png) | ![Utilisation Comparison](scripts/utilisation_comparison.png) |
 
 ## Tech Stack
 
