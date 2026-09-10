@@ -43,8 +43,7 @@ $$x_{ij},\ s_i,\ e_j \geq 0$$
 
 **Maximise:**
 
-$\sum_{i=1}^{3} \text{capacity}_i \cdot u_i +
-\sum_{j=1}^{15} \text{demand}_j \cdot v_j$
+$\sum_{i=1}^{3} \text{capacity}_i \cdot u_i + \sum_{j=1}^{15} \text{demand}_j \cdot v_j$
 
 **Subject to:**
 
